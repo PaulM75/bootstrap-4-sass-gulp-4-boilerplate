@@ -15,12 +15,11 @@
 
     <link rel="icon" href="favicon.ico">
 
-    <!-- Icons for this template -->
-    <link href="assets/fonts/font-awesome/css/all.min.css" rel="stylesheet" type="text/css">
     <!-- Stylesheet -->
     <!-- build:css -->
     <link href="assets/css/app.css" rel="stylesheet">
     <!-- endbuild -->
+    <script src="assets/js/vendor/jquery.min.js"></script>
 </head>
 <body>
 
@@ -112,18 +111,18 @@
 
     <div class="container">
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb bg-light">
-              <li class="breadcrumb-item"><a href="/">Home</a></li>
-              <li class="breadcrumb-item"><a href="/brands.html">Manufacturers</a></li>
-              <li class="breadcrumb-item"><a href="/brand.html">JEEP</a></li>
-              <li class="breadcrumb-item"><a href="/model.html">Cherokee</a></li>
-              <li class="breadcrumb-item"><a href="/model-detail.html">JEEP CHEROKEE 1988</a></li>
-              <li class="breadcrumb-item active" aria-current="page">JEEP CHEROKEE 2018 Betriebsanleitung (in German)</li>
+            <ol class="breadcrumb bg-light" itemscope itemtype="https://schema.org/BreadcrumbList">
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/brands.html" itemprop="item"><span itemprop="name">Manufacturers</span></a><meta itemprop="position" content="2"></li>
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/brand.html" itemprop="item"><span itemprop="name">JEEP</span></a><meta itemprop="position" content="3"></li>
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/model.html" itemprop="item"><span itemprop="name">Cherokee</span></a><meta itemprop="position" content="4"></li>
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/model-detail.html" itemprop="item"><span itemprop="name">JEEP CHEROKEE 1988</span></a><meta itemprop="position" content="5"></li>
+              <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/manual.html" itemprop="item"><span itemprop="name">JEEP CHEROKEE 2018 Betriebsanleitung (in German)</span></a><meta itemprop="position" content="6"></li>
             </ol>
         </nav>
     </div>
 
-    <main role="main">
+    <main>
 
         <!-- MANUAL -->
         <section class="section-first">
@@ -137,7 +136,7 @@
                             <div class="input-group">
                                 <input type="search" name="srch" id="srch" placeholder="search in this manual" class="form-control">
                                 <div class="input-group-append">
-                                    <button type="submit" value="search" class="btn btn-secondary border-left-0">
+                                    <button type="submit" value="search" class="btn btn-secondary border-left-0" alt="Search">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search mb-1" viewBox="0 0 16 16">
                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                                         </svg>
@@ -147,7 +146,7 @@
                         </form>
                         
                         <div class="mb-3">Popular search:
-                            <div class="d-inline-block mr-3">
+                            <div class="d-inline-block ml-2">
                                 <a href="#" class="badge badge-pill badge-primary">TPMS</a>
                                 <a href="#" class="badge badge-pill badge-primary">service interval</a>
                                 <a href="#" class="badge badge-pill badge-primary">oil change</a>
@@ -161,24 +160,166 @@
                 <div class="row mt-5 mb-5">
                     <div  class="col-md-11">
 
-                        <p>PAGE 1 OF 360</p>
+                        <!-- CAROUSEL -->
+                        <div class="position-relative">
+                            <div class="pages w-100 text-nowrap overflow-auto">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item page active" id="page1">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">1</div>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item page" id="page2">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">2</div>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item page" id="page3">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">3</div>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item page" id="page3">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">3</div>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item page" id="page3">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">3</div>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item page" id="page3">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">3</div>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item page" id="page3">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">3</div>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item page" id="page3">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">3</div>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item page" id="page3">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">3</div>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item page" id="page3">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">3</div>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item page" id="page3">
+                                        <a href="#" title="JEEP CHEROKEE 2018 Betriebsanleitung (in German)">
+                                            <img width="135" height="100" src="/assets/img/w300_26443-0.webp" alt="">
+                                            <div class="badge badge-secondary">3</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div id="a2" style="display: block;"><img loading="lazy" width="960" height="678" style="border: 1px solid #444444; max-width: 100%; display:block; height: auto;" alt="JEEP CHEROKEE 2018  Instrukcja obsługi (in Polish) Przeznaczeniem niniejszej 
-                            instrukcji obsługi jest 
-                            przedstawienie warunków 
-                            użytkowania pojazdu.
-                            Firma Jeep umożliwia 
-                            zapoznanie się z dedykowaną 
-                            sekcją dostępną w formacie 
-                            elektronicznym" title="JEEP CHEROKEE 2018  Instrukcja obsługi (in Polish) Przeznaczeniem niniejszej 
-                            instrukcji obsługi jest 
-                            przedstawienie warunków 
-                            użytkowania pojazdu.
-                            Firma Jeep umożliwia 
-                            zapoznanie się z dedykowaną 
-                            sekcją dostępną w formacie 
-                            elektronicznym" src="/assets/img/w960_32204-0.png">
+                            <div style="top:30px;left:-50px;" class="pages-button pb-left position-absolute">
+                                <a role="button" class="btn btn-light btn-sm" onclick="$('.pages').animate({scrollLeft: $('.pages').scrollLeft()-300}, 400);">
+                                    <img src="/assets/img/arrow.svg" alt="Previous" width="25" height="25">
+                                </a>
+                            </div>
+                            <div style="top:30px;right:-50px;" class="pages-button pb-right position-absolute">
+                                <a role="button" class="btn btn-light btn-sm" onclick="$('.pages').animate({scrollLeft: $('.pages').scrollLeft()+300}, 400);">
+                                    <img src="/assets/img/arrow.svg" alt="Next" width="25" height="25">
+                                </a>
+                            </div>
                         </div>
+
+                    </div>
+                </div>
+
+                <div class="row mt-5 mb-5">
+                    <div  class="col-md-11">
+                        
+                        <!-- CONTENT -->
+
+                        <a name="1"></a>
+
+                        <div class="h5 mt-2">PAGE 1 OF 360</div>
+
+                        <div id="a1" style="display: block;"><img loading="lazy" width="960" height="678"
+                                style="border: 1px solid #444444; max-width: 100%; display:block; height: auto;"
+                                alt="JEEP CHEROKEE 2018  Betriebsanleitung (in German) CHEROKEE BENUTZERHANDBUCH "
+                                title="JEEP CHEROKEE 2018  Betriebsanleitung (in German) CHEROKEE BENUTZERHANDBUCH "
+                                src="/assets/img/w960_32204-0.png"></div>
+
+                        
+                        <div id="b1" style="overflow: auto; width: 962px; border: 1px solid rgb(68, 68, 68); padding: 10px; background-color: rgb(238, 238, 238); max-width: 100%; height: 677.143px; display: none;">
+                            <p>CHEROKEE BENUTZERHANDBUCH </p>
+                            <p></p>
+                        </div>
+
+                        <script>$(document).on('click', '#a1', function(){
+                            $(this).hide();
+                                $('#b1').height($('#a1').height()-22);
+                                $('#b1').show();
+                            });
+                            
+                            $(document).on('click', '#b1', function(){
+                                $(this).hide();
+                                $('#a1').show();
+                            });
+                            
+                            
+                            $(document).ready(function(){
+                                $('#b1').height($('#a1').height()-22);
+                            });
+                        </script>
+
+                        <a name="2" class="d-inline-block mt-3"></a>
+
+                        <div class="h5 mt-2">PAGE 1 OF 360</div>    
+                        
+                        <div id="a2" style="display: block;"><img loading="lazy" width="960" height="678"
+                            style="border: 1px solid #444444; max-width: 100%; display:block; height: auto;"
+                            alt="JEEP CHEROKEE 2018  Betriebsanleitung (in German) CHEROKEE BENUTZERHANDBUCH "
+                            title="JEEP CHEROKEE 2018  Betriebsanleitung (in German) CHEROKEE BENUTZERHANDBUCH "
+                            src="/assets/img/w960_32204-0.png"></div>
+
+                    
+                        <div id="b2" style="overflow: auto; width: 962px; border: 1px solid rgb(68, 68, 68); padding: 10px; background-color: rgb(238, 238, 238); max-width: 100%; height: 677.143px; display: none;">
+                            <p>CHEROKEE BENUTZERHANDBUCH </p>
+                            <p></p>
+                        </div>
+
+                        <script>$(document).on('click', '#a2', function(){
+                            $(this).hide();
+                             $('#b2').height($('#a2').height()-22);
+                             $('#b2').show();
+                           });
+                           
+                           $(document).on('click', '#b2', function(){
+                               $(this).hide();
+                             $('#a2').show();
+                           });
+                           
+                           
+                           $(document).ready(function(){
+                               $('#b2').height($('#a2').height()-22);
+                           });
+                           </script>
+                        
+                        <!-- /CONTENT -->
 
                     </div>
 
@@ -210,7 +351,7 @@
         <!-- FOOTER -->
         <footer class="container">
             <p class="float-right">
-                <a class="btn btn-primary shadow text-white" href="#">
+                <a class="btn btn-primary shadow text-white" href="#" role="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
                     </svg>
@@ -223,11 +364,14 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/vendor/jquery.slim.min.js"></script>
-<script src="assets/js/vendor/popper.min.js"></script>
 <script src="assets/js/vendor/bootstrap.min.js"></script>
 <!-- build:js -->
 <script src="assets/js/app.js"></script>
 <!-- endbuild -->
+<script>
+    $("document").ready(function () {
+        $('.pages').scrollLeft($('#page8').position().left - 140);
+    });
+</script>
 </body>
 </html>

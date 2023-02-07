@@ -15,8 +15,6 @@
 
     <link rel="icon" href="favicon.ico">
 
-    <!-- Icons for this template -->
-    <link href="assets/fonts/font-awesome/css/all.min.css" rel="stylesheet" type="text/css">
     <!-- Stylesheet -->
     <!-- build:css -->
     <link href="assets/css/app.css" rel="stylesheet">
@@ -111,14 +109,14 @@
 
     <div class="container">
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb bg-light">
-              <li class="breadcrumb-item"><a href="/">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Manufacturers</li>
+            <ol class="breadcrumb bg-light" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+                <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/brands.html" itemprop="item"><span itemprop="name">Manufacturers</span></a><meta itemprop="position" content="2"></li>
             </ol>
         </nav>
     </div>
 
-    <main role="main">
+    <main>
 
         <!-- MANUFACTURERS -->
         <section class="section-first">
@@ -166,7 +164,7 @@
         <!-- FOOTER -->
         <footer class="container">
             <p class="float-right">
-                <a class="btn btn-primary shadow text-white" href="#">
+                <a class="btn btn-primary shadow text-white" href="#" role="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
                     </svg>
@@ -179,8 +177,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/vendor/jquery.slim.min.js"></script>
-<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/vendor/jquery.min.js"></script>
+
 <script src="assets/js/vendor/bootstrap.min.js"></script>
 <!-- build:js -->
 <script src="assets/js/app.js"></script>
